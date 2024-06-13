@@ -147,4 +147,4 @@ Dit project is gelicentieerd onder de MIT-licentie. Zie het [LICENSE](LICENSE) b
 
 Dit script is ontwikkeld voor ethische en legitieme doeleinden, zoals forensisch onderzoek en beveiligingstesten. Het is de verantwoordelijkheid van de gebruiker om ervoor te zorgen dat het script op een legale en ethische manier wordt gebruikt. Ongeautoriseerd gebruik van dit script voor kwaadaardige doeleinden is verboden en kan juridische gevolgen hebben. Gebruik dit script alleen voor doeleinden waarvoor je toestemming hebt.
 
-Bedankt voor het gebruiken van mijn script! Als je vragen hebt of hulp nodig hebt, aarzel dan niet om contact met mij op te nemen.
+Bedankt voor het gebruiken van mijn script! Als je vragen hebt of hulp nodig hebt kan je mij een bericht sturen.
