@@ -16,7 +16,7 @@ def dump_to_file(agent, base, size, error, directory):
         return error
 
 def splitter(agent, base, size, max_size, error, directory):
-    times = size // max_size  # Use integer division
+    times = size // max_size  
     remainder = size % max_size
 
     current_base = int(base, 16) if isinstance(base, str) else base  
