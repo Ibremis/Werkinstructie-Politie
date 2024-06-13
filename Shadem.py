@@ -6,7 +6,7 @@ import dumper
 import utils
 import argparse
 import logging
-import psutil  # Nieuwe import voor het ophalen van processen
+import psutil 
 from dumper import merge_dumps
 
 logo = """
@@ -44,7 +44,7 @@ def choose_process():
         print(f"[{idx}] {name} (PID: {pid})")
 
     choice = int(input("Kies het nummer van het proces dat je wilt injecteren: "))
-    return process_list[choice]  # retourneert een tuple met PID en naam van het gekozen proces
+    return process_list[choice]  
 
 def MENU():
     parser = argparse.ArgumentParser(
@@ -83,12 +83,12 @@ def MENU():
 print(logo)
 arguments = MENU()
 
-# Vraag de gebruiker om een proces te kiezen als er geen proces is opgegeven
+#laat de gebruiker een proces kiezen
 if len(sys.argv) == 1:
     pid, APP_NAME = choose_process()
 else:
     APP_NAME = sys.argv[1]
-    pid = None  # Gebruiker heeft een naam opgegeven, PID is niet nodig
+    pid = None  #user heeft een naam opgegeven, PID is niet nodig
 
 DIRECTORY = ""
 USB = arguments.usb
@@ -104,7 +104,7 @@ if arguments.verbose:
     DEBUG_LEVEL = logging.DEBUG
 logging.basicConfig(format='%(levelname)s:%(message)s', level=DEBUG_LEVEL)
 
-# Start een nieuwe sessie
+#start een nieuwe sessie
 session = None
 try:
     if USB:
@@ -130,7 +130,7 @@ except Exception as e:
     logging.debug(str(e))
     sys.exit(1)
 
-# De directory waar de output komt
+#directory waar de output komt
 if arguments.out is not None:
     DIRECTORY = arguments.out
     if os.path.isdir(DIRECTORY):
@@ -199,7 +199,7 @@ if STRINGS:
         utils.printProgress(i, l, prefix='Progress:', suffix='Complete', barLength=50)
 print("Finished!")
 
-# Samenvoegen van dumps
+#samenvoegen van dumps
 output_file_path = os.path.join(DIRECTORY, "merged_dump.data")
 merge_dumps(DIRECTORY, output_file_path)
 print(f"All dumps have been merged into {output_file_path}")
